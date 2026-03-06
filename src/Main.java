@@ -2,38 +2,37 @@
 public class Main {
     public static void main(String[] args) {
         //задача 1
-        char clientOS = '1';
-        switch (clientOS) {
-            case '1':
-                System.out.println("Установите версию приложения для Android по ссылке");
-                break;
-            case '0':
-                System.out.println("Установите версию приложения для iOS по ссылке");
-                break;
+        char clientOS = 0;
+        if (clientOS == 1) {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        }
+        else {
+            System.out.println("Установите версию приложения для iOS по ссылке");
         }
         //задача 2
         int clientOS2 = 1;
-        int year = 2012;
-        if (clientOS2 == 1 && year >= 2015) {
+        int clientDeviceYear = 2015;
+        if (clientOS2 == 1 && clientDeviceYear >= 2015) {
             System.out.println("Установите версию приложения для Android по ссылке");
         } else if (clientOS2 == 1) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
         }
-        if (clientOS2 == 0 && year >= 2015) {
+        if (clientOS2 == 0 && clientDeviceYear >= 2015) {
             System.out.println("Установите версию приложения для IOS по ссылке");
         } else if (clientOS2 == 0) {
             System.out.println("Установите облегченную версию приложения для IOS по ссылке");
         }
         //задача 3
-        int year2 = 1928;
+        int year2 = 2024;
         System.out.print("Если год " + year2);
         if (year2 > 1584) {
-            if ((year2 % 4 == 0 || year2 % 400 == 0) && year2 % 100 != 0) {
+            if ((year2 % 4 == 0 && year2 % 100 != 0) || year2 % 400 == 0 ) {
                 System.out.println(", то это високоный год.");
             } else {
                 System.out.println(", то это не високосный год.");
             }
         } else System.out.println(", високосный год еще не был принят.");
+
         //задача 4
         int deliveryDistance = 15;
         int day;
