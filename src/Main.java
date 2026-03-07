@@ -2,7 +2,7 @@
 public class Main {
     public static void main(String[] args) {
         //задача 1
-        char clientOS = 0;
+        int clientOS = 0;
         if (clientOS == 1) {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
@@ -25,13 +25,14 @@ public class Main {
         //задача 3
         int year2 = 2024;
         System.out.print("Если год " + year2);
-        if (year2 > 1584) {
-            if ((year2 % 4 == 0 && year2 % 100 != 0) || year2 % 400 == 0 ) {
+        if (year2 < 1584) {
+            System.out.println(", високосный год еще не был принят.");
+        } else if ((year2 % 4 == 0 && year2 % 100 != 0) || year2 % 400 == 0 ) {
                 System.out.println(", то это високоный год.");
             } else {
                 System.out.println(", то это не високосный год.");
             }
-        } else System.out.println(", високосный год еще не был принят.");
+
 
         //задача 4
         int deliveryDistance = 15;
